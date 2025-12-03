@@ -1,0 +1,116 @@
+DocViewer
+Page
+of 3
+Pages
+ETSN20 Software Testing
+1
+Lab 4: Code Review
+Qunying Song
+Dept. of Computer Science, Lund University
+October 26, 2022
+
+1. Introduction
+   Code review is a common practice to improve quality and transparency of the source code in
+   software development. In this lab, you will practice code review by systematically examining the
+   previously unknown code and identify defects in the code. The lab consists of two parts, namely
+   pair review and group review. By taking this lab, you will gain more insights of code review and
+   compare the pros and cons of two different forms of code review.
+2. Learning Objectives
+   The lab aims at giving practical experience of performing code review. In the lab, you will work
+   with two different forms of code review. First, you will review the other’s code on GitHub as a
+   pair and resolve the review comments from your peer; then you will review other’s code in a group
+   and discuss the potential defects together. The goal is to get yourself acquainted with code review
+   and obtain practical experience from the lab session.
+3. Preparation
+   Assignment 1: Read:
+   a) Code reviewing in the trenches: challenges and best practices [1], by MacLeod et al.
+   b) An empirical study of the impact of modern code review practices on software quality [2],
+   by McIntosh et al.
+   c) Convergent contemporary software peer review practices [3], by Rigby et al.
+   d) What to look for in a code review, a Google engineering practices document on GitHub.
+   Assignment 2: Create your GitHub repository:
+   a) Create your GitHub account on https://github.com/. You can also check the information on
+   https://education.github.com/students to get the student benefits from GitHub.
+   b) Create a new repository with public access.
+   c) In your repository, enable required reviews for pull request. Hints:
+   i. Go to Settings in your repository
+   ii. Select Branches from the option panel on the left
+   iii. Choose Add rule option under Branch protection rules
+   iv. Under Branch name pattern, specify the branch or branches, e.g. master, where you
+   want to enforce reviews before merging the code.
+   v. Under Protect matching branches, tick options ‘Require a pull request before
+   merging’ and ‘Require approvals’ under it, and also tick ‘Do not allow bypassing
+   the above settings’.
+   ETSN20 Software Testing
+   2
+   vi. Select Create option at the bottom to save the changes.
+   Assignment 3: Prepare and commit code to your GitHub repository:
+   a) Write code in Java to implement a program for searching strings in a file. You can use other
+   programming language if you have not worked with Java before, but then you will have to
+   find someone who can review your code during the lab session.
+   i. The minimal requirement is that, given an input command in syntax of “search
+   <pattern> <file>”, the program will print the lines where <pattern> is matched in
+   <file>. For example, “search cat demo.txt”, it should print all lines in demo.txt
+   where the word cat can be found.
+   ii. Optional requirement is to check the Linux grep command and implement some of
+   the command options that you are interested. For example, adding -i option to the
+   command to ignore cases of the pattern.
+   b) Commit your code to your repository using Git and create a new pull request to the branch
+   you specified in step iv of Assignment 2-c). Hints: if you have not worked with Git before,
+   check this Manual for the first three chapters. Steps to create a pull request on GitHub:
+   i. Select Pull requests from the top menu bar
+   ii. Select New pull request option
+   iii. Select base branch and branch for compare from the drop-down list
+   iv. Select Create pull request option
+4. During the lab session
+   The exercise includes two parts, namely the pair review and group review, one hour is designed
+   for each part. For pair review part, you will work as a pair and review each other’s code. For group
+   review, you will work in a larger group and review the code together like in a workshop.
+   Assignment 4: Pair-review (2 persons a group)
+   a) Invite one peer as a collaborator on your GitHub repository, hints:
+   i. Go to Settings in your repository
+   ii. Select Collaborators on the left panel
+   iii. Choose Add people option and add your peer
+   iv. Ensure your peer accepts the invitation
+   b) Assign your peer as a reviewer for your pull request that has been created in Assignment 3.
+   c) Review your peer’s code, leave a comment to the places where you think could be a defect
+   and make sure you are clear on what is the issue and how that should be resolved. Lastly,
+   you have to submit your review changes.
+   d) Refactor your code based on the review comments from your peer, reply to the review
+   comments if you are done or have a different view with it.
+   e) Approve the pull request if all comments have been fixed.
+   Assignment 5: Group-review (5-6 persons a group)
+   a) You will be assigned to a group, or a breakout room on Zoom if online, with 5 to 6 persons,
+   one takes the role as the driver for this part and the rest act as the reviewers.
+   b) The driver shares the screen and present his/her code (the same code you have used for pair
+   review), you can decide on which level of detail you will present your code.
+   ETSN20 Software Testing
+   3
+   c) The reviewers inspect the code, raise the defects, discuss, and elaborate together if there is
+   different thoughts or opinion. The driver can further explain if he/she does not agree.
+   d) The driver should record the defects that have been proposed and agreed upon.
+5. Report
+   The purpose of this lab report is to reflect your insights and experience on doing code review.
+   Recommended length of the report is one A4 page. The report should summarize your experience
+   of reviewing the other’s code and the challenges of judging what is wrong and right while being
+   as an author and a reviewer.
+6. Examination
+   Typical exam questions on this material could be as the followings:
+   a) Peer code review is not only a technical challenge, but also a social one. Discuss how a
+   programmer may react on review critique. Give one example from the code review lab on
+   different types of faults and how you reacted on them.
+   b) Code reviews can be conducted both as pair-review and group-review. Discuss pros and
+   cons. What difference did you notice when doing pair-review and group-review in the code
+   review lab?
+7. References
+   [1] L. MacLeod, M. Greiler, M. -A. Storey, C. Bird and J. Czerwonka, "Code Reviewing in
+   the Trenches: Challenges and Best Practices," in IEEE Software, vol. 35, no. 4, pp. 34-42,
+   July/August 2018, doi: 10.1109/MS.2017.265100500.
+   [2] McIntosh, S., Kamei, Y., Adams, B. et al. An empirical study of the impact of modern code
+   review practices on software quality. Empir Software Eng 21, 2146–2189 (2016).
+   https://doi.org/10.1007/s10664-015-9381-9
+   [3] Peter C. Rigby and Christian Bird. 2013. Convergent contemporary software peer review
+   practices. In Proceedings of the 2013 9th Joint Meeting on Foundations of Software
+   Engineering (ESEC/FSE 2013). Association for Computing Machinery, New York, NY,
+   USA, 202–212. https://doi.org/10.1145/2491411.2491444
+   Annotations
