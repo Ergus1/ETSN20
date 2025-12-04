@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class search {
     public static void main(String[] args) {
-        if (args.length < 1) {
+        if (args.length < 2) {
             System.err.println("Please provide the file path as a command-line argument.");
             return;
         }
